@@ -7,7 +7,7 @@ let
   # grid driver and wdys driver aren't actually used, but their versions are needed to find some filenames
   vgpu-driver-version = cfg.useMyDriver.vgpu-driver-version; #"550.90.07";
   grid-driver-version = "550.90.05";
-  wdys-driver-version = "552.55";
+  wdys-driver-version = "552.74";
   grid-version = "17.3";
   kernel-at-least-6 = lib.strings.versionAtLeast config.boot.kernelPackages.kernel.version "6.0";
 in
@@ -104,7 +104,7 @@ in
       };
 
       vgpu_driver_src.sha256 = mkOption {
-        default = "sha256-qzTsKUKKdplZFnmcz4r5zGGTruyM7e85zRu3hQDc0gA=";
+        default = "sha256-ydNOnbhbqkO2gVaUQXsIWCZsbjw0NMEYl9iV0T01OX0=";
         type = types.str;
         description = ''
           sha256 of the vgpu_driver file in case you're having trouble adding it with for Example `nix-store --add-fixed sha256 NVIDIA-GRID-Linux-KVM-535.129.03-537.70.zip`
